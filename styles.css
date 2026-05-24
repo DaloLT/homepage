@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  background-color: #fcfcfc;
 
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
@@ -40,6 +41,7 @@ body {
   box-shadow: 1px 1px 7px 7px #f5f5f5;
   padding: 30px 0;
   max-width: 900px;
+  background-color: #fff;
 }
 
 .resume__block {
@@ -52,18 +54,25 @@ body {
   .main-info,
   .contact_info_container {
     flex-direction: column;
-  }
-
-  .contact_info_container {
     align-items: center;
   }
 
-  .contact-info__block:not(:last-child) {
+  .contact-info__block {
+    text-align: center;
+    align-items: center;
     margin-bottom: 20px;
+  }
+
+  .contact-info__item {
+    justify-content: center !important;
   }
 
   .experiences {
     margin-right: 0;
+  }
+  
+  .fh {
+    flex-direction: column;
   }
 }
 
@@ -88,17 +97,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }
 
 .contact-info__block--center {
   justify-content: center;
+  align-items: center;
+  flex: 0 0 150px;
+}
+
+.contact-info__block:last-child {
+  align-items: flex-end;
 }
 
 .contact-info__item {
   color: var(--secondary-text-color);
   text-decoration: none;
   display: flex;
-  justify-content: start;
+  align-items: center;
+}
+
+.contact-info__block:last-child .contact-info__item {
+  justify-content: flex-end;
 }
 
 .contact-info__item:not(:last-child) {
@@ -110,6 +130,12 @@ body {
   width: 20px;
   display: flex;
   justify-content: center;
+}
+
+.contact-info__block:last-child .contact-info__item-icon-wrapper {
+  margin-right: 0;
+  margin-left: 10px;
+  order: 2;
 }
 
 .contact-info__item-icon path {
@@ -164,12 +190,12 @@ body {
 
 .skills__text {
   color: var(--secondary-text-color);
-  text-align: justify;
+  text-align: center;
 }
 
 .experiences {
-  flex: 1 1 60%;
-  margin-right: 50px;
+  flex: 1;
+  margin-right: 30px;
 }
 
 .experiences__header {
@@ -217,7 +243,7 @@ body {
 }
 
 .additional-info {
-  flex: 1 1 40%;
+  flex: 1;
 }
 
 .additional-info__education {
